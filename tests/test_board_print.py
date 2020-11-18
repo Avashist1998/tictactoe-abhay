@@ -1,5 +1,5 @@
 import unittest
-from tic_tac_toe import TicTacToe
+from tic_tac_toe.TicTacToe import TicTacToe
 
 def board_maker(arr:list=[1,2,3,4,5,6,7,8,9]):
     output = "-------\n|{0}|{1}|{2}|"\
