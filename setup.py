@@ -4,8 +4,8 @@ with open("README.md","r") as fh:
     long_description = fh.read()
 
 setuptools.setup(
-        name="tictoctoe-abhay",
-        version="0.0.2",
+        name="tictactoe-abhay",
+        version="0.0.3",
         author="Abhay Vashist",
         author_email="avashist98@tamu.edu",
         description="A small package that provide the backend for tictactoe",

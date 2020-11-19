@@ -51,10 +51,9 @@ class TicTacToe():
             Returns:
                 str: string representation of the board
         """
-        output = "-------\n|{0}|{1}|{2}|"\
-            "\n|{3}|{4}|{5}|"\
-            "\n|{6}|{7}|{8}|"\
-            "\n-------\n".format(*self.board)
+        output = "|{0}|{1}|{2}|\n-------\n"\
+            "|{3}|{4}|{5}|\n-------\n"\
+            "|{6}|{7}|{8}|\n".format(*self.board)
         return output
 
     def play_turn(self, spot:int=0):
@@ -118,23 +117,27 @@ class TicTacToe():
                 output = True
             # vertical case
             elif (char == self.board[1] and char == self.board[7]):
-                self.board[4], self.board[1], self.board[7] = '-','-','-'
+                self.board[4], self.board[1], self.board[7] = '|','|','|'
                 output = True
         if(self.board[0] !=1 and not output):
             char = self.board[0]
             #horizontal case
             if (char == self.board[2] and self.board[1] == char):
+                self.board[0], self.board[1], self.board[2] = '-','-','-'  
                 output = True
             #vertical case
             elif (char == self.board[3] and char == self.board[6]): 
+                self.board[0], self.board[3], self.board[6] = '|','|','|'
                 output = True     
         if(self.board[8] != 9 and not output):
             char = self.board[8]
             #horizontal case
             if (self.board[6] == char and self.board[7] == char):
+                self.board[6], self.board[7], self.board[8] = '-','-','-'
                 output = True
             #vertical case
             elif (self.board[2] == char and self.board[5] == char): 
+                self.board[2], self.board[5], self.board[8] = '|', '|', '|'
                 output = True
         if (output):
             self.winner = self.char_to_player(char)

@@ -2,19 +2,17 @@ import unittest
 from tic_tac_toe.TicTacToe import TicTacToe
 
 def board_maker(arr:list=[1,2,3,4,5,6,7,8,9]):
-    output = "-------\n|{0}|{1}|{2}|"\
-        "\n|{3}|{4}|{5}|"\
-        "\n|{6}|{7}|{8}|"\
-        "\n-------\n".format(*arr)
+    output = "|{0}|{1}|{2}|\n-------\n"\
+        "|{3}|{4}|{5}|\n-------\n"\
+        "|{6}|{7}|{8}|\n".format(*arr)
     return output
 class test_board_print(unittest.TestCase):
     def test_inital(self):
         game = TicTacToe()
         numbers = [*range(1,11)]
-        init_board = "-------\n|{0}|{1}|{2}|"\
-            "\n|{3}|{4}|{5}|"\
-            "\n|{6}|{7}|{8}|"\
-            "\n-------\n".format(*numbers)
+        init_board = "|{0}|{1}|{2}|\n-------\n"\
+            "|{3}|{4}|{5}|\n-------\n"\
+            "|{6}|{7}|{8}|\n".format(*numbers)
         self.assertEqual(game.get_board(),init_board)
 
     def test_normal(self):
