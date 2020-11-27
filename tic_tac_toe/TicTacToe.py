@@ -77,7 +77,7 @@ class TicTacToe():
             val = 0
         else: 
             val = -1
-        if(self.check_winner() or self.can_play()):
+        if(self.check_winner() or not self.can_play()):
             val = 1
         return val
     
