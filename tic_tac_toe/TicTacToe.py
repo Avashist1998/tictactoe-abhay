@@ -41,7 +41,7 @@ class TicTacToe():
         """
         board = self.board
         for i, char in enumerate(board):
-            if(char == i+1):
+            if(char == '{}'.format(i+1)):
                 return True
         return False
     

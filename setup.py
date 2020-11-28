@@ -5,7 +5,7 @@ with open("README.md","r") as fh:
 
 setuptools.setup(
         name="tictactoe-abhay",
-        version="0.0.6",
+        version="0.0.7",
         author="Abhay Vashist",
         author_email="avashist98@tamu.edu",
         description="A small package that provide the backend for tictactoe",

@@ -61,7 +61,7 @@ class test_board_print(unittest.TestCase):
         values = ['x','o','x','o','x','x','o','x','o']
         turn_nine = board_maker(values)
         self.assertEqual(turn_nine, game.get_board())
-        self.assertEqual(0,final_move)
+        self.assertEqual(1,final_move)
 
 if __name__ == "__main__":
     unittest.main(verbosity=True)
